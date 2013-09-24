@@ -37,9 +37,9 @@
 # This Properties map is specified in the Java 'property list' text format
 # http://java.sun.com/javase/6/docs/api/java/util/Properties.html#load%28java.io.Reader%29
 
-metadata.operatorContactUrl=ENTER_AN_URL_WITH_YOUR_CONTACT_INFO_HERE_FOR_WEBMASTERS_AFFECTED_BY_YOUR_CRAWL
-metadata.jobName=basic
-metadata.description=Basic crawl starting with useful defaults
+metadata.operatorContactUrl=http://www.chpooo.com
+metadata.jobName=d1ev
+metadata.description=test crawler for d1ev
 
 ##..more?..##
    </value>
@@ -54,7 +54,7 @@ metadata.description=Basic crawl starting with useful defaults
     <prop key="seeds.textSource.value">
 
 # URLS HERE
-http://example.example/example
+http://www.d1ev.com
 
     </prop>
    </props>
@@ -206,9 +206,9 @@ http://example.example/example
   <!-- <property name="canonicalizationPolicy"> 
         <ref bean="canonicalizationPolicy" />
        </property> -->
-  <!-- <property name="queueAssignmentPolicy"> 
+  <property name="queueAssignmentPolicy"> 
         <ref bean="queueAssignmentPolicy" />
-       </property> -->
+       </property>
   <!-- <property name="uriPrecedencePolicy"> 
         <ref bean="uriPrecedencePolicy" />
        </property> -->
@@ -323,11 +323,11 @@ http://example.example/example
     <!-- ...extract outlinks from HTML content... -->
     <ref bean="extractorHtml"/>
     <!-- ...extract outlinks from CSS content... -->
-    <ref bean="extractorCss"/>
+    <!-- <ref bean="extractorCss"/> -->
     <!-- ...extract outlinks from Javascript content... -->
-    <ref bean="extractorJs"/>
+    <!-- <ref bean="extractorJs"/> -->
     <!-- ...extract outlinks from Flash content... -->
-    <ref bean="extractorSwf"/>
+    <!-- <ref bean="extractorSwf"/> -->
    </list>
   </property>
  </bean>
@@ -569,14 +569,13 @@ http://example.example/example
  
 
  <!-- QUEUE ASSIGNMENT POLICY -->
- <!--
+ 
  <bean id="queueAssignmentPolicy" 
-   class="org.archive.crawler.frontier.SurtAuthorityQueueAssignmentPolicy">
-  <property name="forceQueueAssignment" value="" />
+   class="org.archive.crawler.frontier.ELFHashQueueAssignmentPolicy">
+  <!--<property name="forceQueueAssignment" value="" />
   <property name="deferToPrevious" value="true" />
-  <property name="parallelQueues" value="1" />
+  <property name="parallelQueues" value="1" /> -->
  </bean>
- -->
  
  <!-- URI PRECEDENCE POLICY -->
  <!--
