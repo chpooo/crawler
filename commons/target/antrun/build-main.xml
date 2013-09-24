@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <tstamp>
+    <format pattern="yyyyMMdd.HHmmss" property="timestamp"/>
+  </tstamp>
+  <delete file="target/classes/org/archive/util/timestamp.txt" failonerror="false"/>
+  <echo message="timestamp=${timestamp}" file="target/classes/org/archive/util/timestamp.txt"/>
+</target>
+</project>
