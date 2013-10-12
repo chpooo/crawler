@@ -1,4 +1,4 @@
-
+package com.chpooo.heritrix;
 import org.archive.crawler.Heritrix;
 
 public class startUp {
